@@ -1,0 +1,7 @@
+apiVersion: core.core.gardener.cloud/v1beta1
+kind: DHCPEntry
+metadata:
+  name: dhcpentry-sample
+spec:
+  # Add fields here
+  foo: bar

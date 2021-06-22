@@ -1,0 +1,24 @@
+# permissions for end users to edit dhcpentries.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: dhcpentry-editor-role
+rules:
+- apiGroups:
+  - core.core.gardener.cloud
+  resources:
+  - dhcpentries
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - core.core.gardener.cloud
+  resources:
+  - dhcpentries/status
+  verbs:
+  - get

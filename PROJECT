@@ -1,0 +1,16 @@
+domain: core.gardener.cloud
+layout:
+- go.kubebuilder.io/v3
+projectName: dhcp-controller
+repo: core.gardener.cloud/dhcpcontroller
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: core.gardener.cloud
+  group: core
+  kind: DHCPEntry
+  path: core.gardener.cloud/dhcpcontroller/api/v1beta1
+  version: v1beta1
+version: "3"

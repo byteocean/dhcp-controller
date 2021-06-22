@@ -1,0 +1,20 @@
+# permissions for end users to view dhcpentries.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: dhcpentry-viewer-role
+rules:
+- apiGroups:
+  - core.core.gardener.cloud
+  resources:
+  - dhcpentries
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - core.core.gardener.cloud
+  resources:
+  - dhcpentries/status
+  verbs:
+  - get
